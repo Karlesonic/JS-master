@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+<title>Kozel_Svetly</title>
+</head>
+<body style="background-color: white; cursor: url(https://www.shareicon.net/data/128x128/2015/11/09/669344_tool_512x512.png), pointer;">
+<div id="kvadrat" class='nigga' style="background-color: black; width: 100px; height: 100px; position: absolute; left: 0; top: 0;">
+    
+</div>
+
+<div id="niggatext" class="niggatext">
+    <h1> Нажмите на негра 4 раза, будьте добры</h1>
+</div>
+
+<div id="krasavchik" class="krasavchik hidden">
+    <h1> ВЫ КРАСАВЧИК!</h1>
+</div>
+
+
+<script>
+let counter = 0;
+document.getElementById('kvadrat').addEventListener('click', krasavchik)
+
+function krasavchik(){
+    counter++
+    if (counter == 4) {
+        document.getElementById('krasavchik').classList.remove('hidden');
+        document.getElementById('niggatext').classList.add('hidden');
+    }
+}
+
+
+document.getElementById('kvadrat').onclick=start_kvadrat;
+
+
+function start_kvadrat(){
+setInterval(click_kvadrat, 1);
+    }
+        let napravlenie=1;
+        function click_kvadrat(){
+let screen_h = window.innerHeight-100;
+let screen_w = window.innerWidth-100;
+let kvadrat = document.getElementById("kvadrat");
+if (napravlenie==1){
+kvadrat.style.top=(parseInt(kvadrat.style.top)+1)+'px';
+}
+if (parseInt(kvadrat.style.top)>=screen_h){
+napravlenie=2;
+}
+if (napravlenie==2){
+kvadrat.style.left=(parseInt(kvadrat.style.left)+1)+'px';
+}
+if (parseInt(kvadrat.style.left)>=screen_w){
+napravlenie=3;
+}
+if (napravlenie==3){
+kvadrat.style.top=(parseInt(kvadrat.style.top)-1)+'px';
+}
+if (parseInt(kvadrat.style.top)<=0){
+napravlenie=4;
+}
+if (napravlenie==4){
+kvadrat.style.left=(parseInt(kvadrat.style.left)-1)+'px';
+}
+if (parseInt(kvadrat.style.left)<=0){
+napravlenie=1;
+}
+}
+</script>
+</body>
+</html>

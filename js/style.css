@@ -1,0 +1,33 @@
+.krasavchik {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    color: red;
+}
+
+.niggatext {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    color: rgb(56, 202, 88);
+}
+
+.hidden {
+    display: none;
+}
+
+.lebron {
+    width: 100px;
+    height: 100px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;  
+    pointer-events: none;
+}
+
+.nigga {
+    background-image: url(./lebron.png);
+    
+}
